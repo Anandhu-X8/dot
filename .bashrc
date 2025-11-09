@@ -8,7 +8,7 @@ export HYPRSHOT_DIR='/home/AANN/Pics/SS/'
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-echo "Divine Intuituion" | figlet -f /usr/share/figlet/fonts/halfiwi.flf
+# echo "Divine Intuituion" | figlet -f /usr/share/figlet/fonts/halfiwi.flf
 
 # Previous directory
 alias b='cd -'
@@ -36,7 +36,7 @@ alias ww='eza --color=always --long --git --icons=always --no-time --no-user --n
 
 # Go to git repository root
 alias grt='cd "$(git rev-parse --show-toplevel 2>/dev/null || echo .)"'
-alias for='nvim ~/Documents/ME/forgor.md'
+alias fo='nvim ~/Documents/ME/forgor.md'
 alias cls='clear'
 
 # Custom fast theme (replace with your actual function if needed)
@@ -47,7 +47,7 @@ alias cls='clear'
 # alias ll='ls -l --color=auto'
 alias la='ls -la --color=auto'
 alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
+# PS1='[\u@\h \W]\$ '
 
 alias bas='source ~/.bashrc'
 alias swim='sudo nvim'
@@ -60,7 +60,6 @@ alias :q='exit'
 alias :ZZ='exit'
 alias tt='tty-clock -c'
 
-eval "$(zoxide init bash)"
 alias cd='z'
 alias cccc='cd ~/.config/ && ls'
 alias ccc='cd ~/dotfiles/ && ls'
@@ -74,6 +73,7 @@ export PATH=$PATH:/home/AANN/.spicetify
 
 eval "$(thefuck --alias)"
 
+eval "$(zoxide init bash)"
 # on  exiting yazi, cd into that dir
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
