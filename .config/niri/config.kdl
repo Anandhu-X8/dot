@@ -5,7 +5,7 @@
 spawn-at-startup "swww-daemon"
 //spawn-at-startup "flameshot &"
 spawn-sh-at-startup "wlsunset -l 10 -L 76"
-spawn-sh-at-startup "swww img ~/Pics/Wall/retro.gif --transition-duration 1"
+spawn-sh-at-startup "swww img ~/pics/Wall/retro.gif --transition-duration 1"
 
 // This config is in the KDL format: https://kdl.dev
 // "/-" comments out the following node.
@@ -100,7 +100,7 @@ input {
     }
 
     // Uncomment this to make the mouse warp to the center of newly focused windows.
-    // warp-mouse-to-focus
+       warp-mouse-to-focus
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
@@ -366,7 +366,7 @@ animations {
     }
 
     window-movement {
-        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+        spring damping-ratio=0.75 stiffness=323 epsilon=0.0001
     }
 
     window-resize {
@@ -423,6 +423,15 @@ window-rule {
     match app-id="Cult"
     opacity 1.0
 }
+window-rule {
+    match app-id="gwenview"
+    opacity 1.0
+}
+window-rule {
+    match app-id="inkscape"
+    opacity 1.0
+}
+
 window-rule {
     match app-id="zen"
     opacity 1.0
@@ -504,11 +513,14 @@ binds {
     }
 
     
-//    Mod+F12 hotkey-overlay-title="flameshot" { spawn "flameshot gui"; }
+
+  Mod+F12 hotkey-overlay-title="flameshot" { spawn-sh "flameshot gui"; }
 //Mod+Z { spawn "env XDG_CURRENT_DESKTOP=niri flameshot gui";}
 // Mod+Y { spawn-sh 'grim -g "$(slurp)" - | swappy -f - ';}
-Mod+F9 {spawn-sh "hyprshot -m region";}
-Mod+F10 {spawn-sh "hyprshot -m region --clipboard-only";}
+// hyprshot is a wrapper for the ugly command you see above,
+// grim takes ss, slurp helps select area, swappy(optional) enables markup
+Mod+F9 {spawn-sh "hyprshot -m region -o /home/AANN/pics/hyprshots" ;}
+Mod+F10 {spawn-sh "hyprshot -m region -o /home/AANN/pics/hyprshots --clipboard-only";}
 Mod+grave {spawn "hyprlock";}
 
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
@@ -525,8 +537,9 @@ Mod+grave {spawn "hyprlock";}
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
     // Using spawn-sh allows to pass multiple arguments together with the command.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    // NO FUCKING WAY this little bitch controls the volume knob of my keyboard..!!
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
@@ -758,7 +771,7 @@ Mod+grave {spawn "hyprlock";}
     //
     // The allow-inhibiting=false property can be applied to other binds as well,
     // which ensures niri always processes them, even when an inhibitor is active.
-    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    Mod+Shift+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E { quit; }

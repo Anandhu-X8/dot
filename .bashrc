@@ -21,7 +21,7 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias ls='eza --color=always --git --icons=always --no-time --no-user --no-permissions'
 alias ll='eza --color=always --long --git --icons=always --no-time --no-user --no-permissions'
-alias ww='eza --color=always --long --git --icons=always --no-time --no-user --no-permissions'
+alias ww='eza --color=always --long --git --icons=always --no-time --no-user'
 
 # Jump to N-th previous directory in bash (requires pushd/popd history)
 # alias 1='cd -1'
@@ -36,8 +36,12 @@ alias ww='eza --color=always --long --git --icons=always --no-time --no-user --n
 
 # Go to git repository root
 alias grt='cd "$(git rev-parse --show-toplevel 2>/dev/null || echo .)"'
-alias fo='nvim ~/Documents/ME/forgor.md'
+alias fo='nvim ~/documents/ME/forgor.md'
+alias lix='nvim ~/documents/ME/Linx.md'
 alias cls='clear'
+alias ffs='sudo !!'
+alias pfind='ps aux | grep'
+
 
 # Custom fast theme (replace with your actual function if needed)
 # alias fsh-alias='fast-theme'
@@ -59,7 +63,7 @@ alias :wq='exit'
 alias :q='exit'
 alias :ZZ='exit'
 alias tt='tty-clock -c'
-
+alias now='nvim ~/.bashrc'
 alias cd='z'
 alias cccc='cd ~/.config/ && ls'
 alias ccc='cd ~/dotfiles/ && ls'

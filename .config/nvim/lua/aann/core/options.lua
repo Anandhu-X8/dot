@@ -45,3 +45,10 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- Folding settings
+opt.foldmethod = "marker" -- use marker-based folding
+opt.foldmarker = "{{{,}}}" -- set the fold markers
+opt.foldenable = true -- enable folding by default
+opt.foldlevel = 99 -- keep folds open by default
+opt.foldlevelstart = 99 -- open all folds when a file is opened
