@@ -10,9 +10,9 @@
         "temperature",
          "cpu",
         "memory",
-       "niri/workspaces"
+       "niri/workspaces",
 //        "sway/mode",
-//        "sway/scratchpad",
+        "niri/scratchpad"
 //        "custom/waybar-media"
     ],
    "modules-center": [
@@ -112,6 +112,10 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	"calender": {
+	"mode": "month",
+	"on-click": "open"
+	},
         "format-alt": "{:%d %a %H:%M}"
     },
     "cpu": {

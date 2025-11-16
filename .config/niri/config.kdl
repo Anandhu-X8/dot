@@ -507,7 +507,13 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Alt+F4 allow-when-locked=true { spawn "brightnessctl" "set" "5%-"; }
     Alt+F5 allow-when-locked=true { spawn "brightnessctl" "set" "+5%"; }
+    Alt+F2 allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05- "; }
+    Alt+F3 allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ "; }
+    Alt+F1 allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle "; }
 
+    // backlight toggle
+    Mod+Space { spawn-sh "/home/AANN/scripts/backlight-toggle.sh " ; }
+    
  Print { 
         spawn "script" "--command" "XDG_CURRENT_DESKTOP=sway flameshot gui" "/dev/null";
     }

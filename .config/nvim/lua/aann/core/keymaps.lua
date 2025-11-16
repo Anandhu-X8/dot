@@ -56,5 +56,5 @@ keymap.set("n", "G", "Gzz", { silent = true })
 
 keymap.set("n", "<C-u>", "<C-u>zz", { silent = true, desc = "move half page up" })
 keymap.set("n", "<C-d>", "<C-d>zz", { silent = true, desc = "move half page down" })
-keymap.set("n", "<C-f>", "<C-u>zz", { silent = true, desc = "move entire page forward" })
-keymap.set("n", "<C-b>", "<C-u>zz", { silent = true, desc = "move entire page next" })
+keymap.set("n", "<C-f>", "<C-f>zz", { silent = true, desc = "move entire page forward" })
+keymap.set("n", "<C-b>", "<C-b>zz", { silent = true, desc = "move entire page next" })
