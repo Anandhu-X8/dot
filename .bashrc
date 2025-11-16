@@ -39,7 +39,6 @@ alias grt='cd "$(git rev-parse --show-toplevel 2>/dev/null || echo .)"'
 alias fo='nvim ~/documents/ME/forgor.md'
 alias lix='nvim ~/documents/ME/Linx.md'
 alias cls='clear'
-alias ffs='sudo !!'
 alias pfind='ps aux | grep'
 
 
