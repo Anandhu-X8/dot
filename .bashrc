@@ -73,6 +73,7 @@ alias ctt='swww img --transition-type any --transition-duration 1.2 --transition
 export PATH="$PATH:/usr/sbin"
 
 export PATH=$PATH:/home/AANN/.spicetify
+export PATH=$PATH:/home/AANN/gitclones/pomo
 
 eval "$(thefuck --alias)"
 
