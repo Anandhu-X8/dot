@@ -2,8 +2,8 @@
   ✗ lua
     ✗ aann
       ✗ core
-    │ │  init.lua
-    │ │  keymaps.lua
+    │ │  ✗ init.lua
+    │ │  ✗ keymaps.lua
     │ └  ✗ options.lua
       plugins
     └  lazy.lua

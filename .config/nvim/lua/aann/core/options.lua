@@ -3,6 +3,8 @@ vim.cmd("let g:netrw_liststyle = 3")
 local opt = vim.opt -- for conciseness
 opt.autochdir = true
 
+--trick:
+-- opt.scrolloff = 999
 -- read doc by :h autoindent
 
 -- line numbers

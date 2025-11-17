@@ -40,21 +40,21 @@ vim.keymap.set("n", "<MiddleMouse>", '"+gP', { noremap = true, silent = true })
 keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss Noice Messages" })
 
 -- clever trick?
-vim.opt.scrolloff = 999
+-- vim.opt.scrolloff = 999
 -- nope
 
--- Always center the cursorline
-keymap.set("n", "k", "kzz", { silent = true, desc = "move up" })
-keymap.set("n", "j", "jzz", { silent = true, desc = "move down" })
-
--- Always center the search element
-keymap.set("n", "n", "nzz", { silent = true, desc = "next search item" })
-keymap.set("n", "N", "Nzz", { silent = true, desc = "previous search item" })
-
--- Always center while travelling pages
-keymap.set("n", "G", "Gzz", { silent = true })
-
-keymap.set("n", "<C-u>", "<C-u>zz", { silent = true, desc = "move half page up" })
-keymap.set("n", "<C-d>", "<C-d>zz", { silent = true, desc = "move half page down" })
-keymap.set("n", "<C-f>", "<C-f>zz", { silent = true, desc = "move entire page forward" })
-keymap.set("n", "<C-b>", "<C-b>zz", { silent = true, desc = "move entire page next" })
+-- -- Always center the cursorline
+-- keymap.set("n", "k", "kzz", { silent = true, desc = "move up" })
+-- keymap.set("n", "j", "jzz", { silent = true, desc = "move down" })
+--
+-- -- Always center the search element
+-- keymap.set("n", "n", "nzz", { silent = true, desc = "next search item" })
+-- keymap.set("n", "N", "Nzz", { silent = true, desc = "previous search item" })
+--
+-- -- Always center while travelling pages
+-- keymap.set("n", "G", "Gzz", { silent = true })
+--
+-- keymap.set("n", "<C-u>", "<C-u>zz", { silent = true, desc = "move half page up" })
+-- keymap.set("n", "<C-d>", "<C-d>zz", { silent = true, desc = "move half page down" })
+-- keymap.set("n", "<C-f>", "<C-f>zz", { silent = true, desc = "move entire page forward" })
+-- keymap.set("n", "<C-b>", "<C-b>zz", { silent = true, desc = "move entire page next" })
