@@ -22,10 +22,16 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
+# ---- Eza (better ls) -----
+alias ls="eza --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias ll="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user"
+
+
 alias grt='cd "$(git rev-parse --show-toplevel 2>/dev/null || echo .)"'
 alias fo='nvim ~/documents/ME/forgor.md'
 alias lix='nvim ~/documents/ME/Linx.md'
 alias cls='clear'
+alias ffs='fuck'
 alias pfind='ps aux | grep'
 alias la='ls -la --color=auto'
 alias grep='grep --color=auto'
@@ -79,6 +85,27 @@ _fzf_compgen_dir() {
 }
 
 
+# setting up fzf-git
+source ~/gitclones/fzf-git.sh/fzf-git.sh
+
+export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+
+# Advanced customization of fzf options via _fzf_comprun function
+# - The first argument to the function is the name of the command.
+# - You should make sure to pass the rest of the arguments to fzf.
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+    export|unset) fzf --preview "eval 'echo $'{}"         "$@" ;;
+    ssh)          fzf --preview 'dig {}'                   "$@" ;;
+    *)            fzf --preview "bat -n --color=always --line-range :500 {}" "$@" ;;
+  esac
+}
+
 # --- setup fzf theme ---
 fg="#CBE0F0"
 bg="#011628"
@@ -89,7 +116,14 @@ cyan="#2CF9ED"
 
 export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
 
+# ----- Bat (better cat) -----
 
+export BAT_THEME=tokyonight_night
+
+# thefuck alias
+eval $(thefuck --alias)
+eval $(thefuck --alias fk)
 
 
 PS1=$'\n'"%1~ 󰅴  "
+
