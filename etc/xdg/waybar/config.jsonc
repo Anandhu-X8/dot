@@ -26,9 +26,10 @@
         "power-profiles-daemon",
         // "keyboard-state",
 //        "sway/language",
-        "battery",
-        // "battery#bat2",
-        "tray"
+        "battery"
+        // "battery#bat2"
+       // "tray"
+	
 //        "custom/power"
     ],
     // Modules configuration
@@ -111,12 +112,14 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+        //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	"calender": {
+	"calendar": {
 	"mode": "month",
 	"on-click": "open"
 	},
-        "format-alt": "{:%d %a %H:%M}"
+        "format": "{:%d %a | %H:%M}",
+	"format-alt": "{:%H:%M}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -131,7 +134,7 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         //"format": "{temperatureC} 󰈸",
-        "format": "{temperatureC} ",
+        "format": "{temperatureC}° ",
      //   "format": "{temperatureC} 🔥",
         //"format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
@@ -173,12 +176,15 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         //"format-wifi": "{essid} ({signalStrength}%) ",
-        "format-wifi": "{essid} ({signalStrength}%)",
+        //"format-wifi": "{essid} ({signalStrength}%)",
+        "format-wifi": "Ping! ({signalStrength}%)",
         "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        //"tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format": "{essid} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Offline! ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr} ({signalStrength}%)"
+        //"format-alt": "{ifname}: {ipaddr}/{cidr} ({signalStrength}%)"
+        "format-alt": "{essid}"
     },
     "pulseaudio": {
         "scroll-step": 2, // %, can be a float

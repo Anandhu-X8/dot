@@ -37,6 +37,7 @@ alias ww='eza --color=always --long --git --icons=always --no-time --no-user'
 # Go to git repository root
 alias grt='cd "$(git rev-parse --show-toplevel 2>/dev/null || echo .)"'
 alias fo='nvim ~/documents/ME/forgor.md'
+alias todo='nvim ~/documents/ME/todo.md'
 alias lix='nvim ~/documents/ME/Linx.md'
 alias cls='clear'
 alias pfind='ps aux | grep'

@@ -3,8 +3,11 @@
 # Paths
 
 export PATH="$PATH:/usr/sbin"
+export PATH="$PATH:/usr/local/bin"
 export PATH=$PATH:/home/AANN/.spicetify
-export PATH=$PATH:/home/AANN/gitclones/pomo
+export PATH=$PATH:/home/AANN/clones/pomo
+export PATH=$PATH:/home/AANN/clones/nitch
+export PATH=$PATH:/home/AANN/go/bin
 
 # other exports
 export EDITOR=nvim
@@ -14,6 +17,8 @@ export HYPRSHOT_DIR='/home/AANN/Pics/SS/'
 # aliases
 # Previous directory
 alias b='cd -'
+alias y='yazi'
+alias shell='nvim ~/.zshrc'
 
 # Parent directories
 alias ..='cd ..'
@@ -25,10 +30,12 @@ alias ......='cd ../../../../..'
 # ---- Eza (better ls) -----
 alias ls="eza --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias ll="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user"
+alias ttree='eza --tree --level 2'
 
 
 alias grt='cd "$(git rev-parse --show-toplevel 2>/dev/null || echo .)"'
 alias fo='nvim ~/documents/ME/forgor.md'
+alias todo='nvim ~/documents/ME/todo.md'
 alias lix='nvim ~/documents/ME/Linx.md'
 alias cls='clear'
 alias ffs='fuck'
@@ -86,7 +93,7 @@ _fzf_compgen_dir() {
 
 
 # setting up fzf-git
-source ~/gitclones/fzf-git.sh/fzf-git.sh
+source ~/clones/fzf-git.sh/fzf-git.sh
 
 export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
