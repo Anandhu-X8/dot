@@ -8,6 +8,7 @@ export PATH=$PATH:/home/AANN/.spicetify
 export PATH=$PATH:/home/AANN/clones/pomo
 export PATH=$PATH:/home/AANN/clones/nitch
 export PATH=$PATH:/home/AANN/go/bin
+export PATH=$PATH:/home/AANN/.cargo/bin
 
 # other exports
 export EDITOR=nvim
@@ -17,6 +18,7 @@ export HYPRSHOT_DIR='/home/AANN/Pics/SS/'
 # aliases
 # Previous directory
 alias b='cd -'
+alias t='trans'
 alias y='yazi'
 alias shell='nvim ~/.zshrc'
 

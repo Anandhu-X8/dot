@@ -441,6 +441,10 @@ window-rule {
 }
 
 window-rule {
+    match app-id="telegram"
+    opacity 1.0
+}
+window-rule {
     match app-id="zen"
     opacity 1.0
 }
