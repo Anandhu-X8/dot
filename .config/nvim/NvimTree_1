@@ -1,11 +1,5 @@
 ~/dot/.config/nvim/..
-  ✗ lua
-    ✗ aann
-      ✗ core
-    │ │  ✗ init.lua
-    │ │  ✗ keymaps.lua
-    │ └  ✗ options.lua
-      plugins
-    └  lazy.lua
+  ✗ lua
+  ★ spell
    init.lua
    lazy-lock.json

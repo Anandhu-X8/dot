@@ -61,6 +61,13 @@ alias cccc='cd ~/.config/ && ls'
 alias ccc='cd ~/dotfiles/ && ls'
 alias dies='poweroff'
 
+# Enable zsh-autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Enable zsh-syntax-highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
 
 # ---- FZF -----
 
@@ -130,6 +137,20 @@ export BAT_THEME=tokyonight_night
 # thefuck alias
 eval $(thefuck --alias)
 eval $(thefuck --alias fk)
+
+# history setup
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1000
+HISTSIZE=999
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
+
+bindkey -e # disable vi mode and do emacs mode
+# completion using arrow keys (based on history)
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
 
 
 PS1=$'\n'"%1~ 󰅴  "

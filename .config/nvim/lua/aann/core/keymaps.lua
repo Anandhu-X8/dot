@@ -5,6 +5,10 @@ local keymap = vim.keymap -- for conciseness
 
 ---------------------
 -- General Keymaps -------------------
+-- use Ctrl+j / Ctrl+k to move in insert mode
+keymap.set("i", "<C-j>", "<Down>", { desc = "Move down in insert mode" })
+keymap.set("i", "<C-k>", "<Up>", { desc = "Move up in insert mode" })
+keymap.set("i", "<C-l>", "<Right>", { desc = "Move right in insert mode" })
 
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
