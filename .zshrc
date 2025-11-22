@@ -59,8 +59,8 @@ alias :ZZ='exit'
 alias tt='tty-clock -c'
 alias now='nvim ~/.bashrc'
 alias cd='z'
-alias cccc='cd ~/.config/ && ls'
-alias ccc='cd ~/dotfiles/ && ls'
+alias truec='cd ~/.config/ && ls'
+alias c='cd ~/dotfiles/ && ls'
 alias dies='poweroff'
 
 # Enable zsh-autosuggestions

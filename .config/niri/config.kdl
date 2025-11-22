@@ -67,7 +67,7 @@ input {
     // Omitting settings disables them, or leaves them at their default values.
     // All commented-out settings here are examples, not defaults.
     touchpad {
-        // off
+        // off // toggle-touchpad
         tap
         // dwt
         // dwtp
@@ -442,6 +442,10 @@ window-rule {
 
 window-rule {
     match app-id="telegram"
+    opacity 1.0
+}
+window-rule {
+    match app-id="libreoffice-writer"
     opacity 1.0
 }
 window-rule {
