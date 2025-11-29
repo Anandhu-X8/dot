@@ -4,6 +4,7 @@
 
 export PATH="$PATH:/usr/sbin"
 export PATH="$PATH:/usr/local/bin"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH=$PATH:/home/AANN/.spicetify
 export PATH=$PATH:/home/AANN/clones/pomo
 export PATH=$PATH:/home/AANN/clones/nitch
@@ -156,4 +157,3 @@ bindkey '^[[B' history-search-forward
 
 
 PS1=$'\n'"%1~ 󰅴  "
-

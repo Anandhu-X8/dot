@@ -39,7 +39,10 @@ return {
 				colors.fg_sidebar = fg_dark
 			end,
 		})
-
-		vim.cmd("colorscheme tokyonight")
+		-- 👍 Add this block
+		on_highlights =
+			function(hl, colors)
+				hl.Comment = { fg = "#a9b1d6" } -- brighter comment color
+			end, vim.cmd("colorscheme tokyonight")
 	end,
 }
