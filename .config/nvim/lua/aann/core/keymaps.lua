@@ -49,8 +49,8 @@ keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss Noice M
 
 -- -- Always center the cursorline
 -- this is need along with scrolloff for the last lines
-keymap.set("n", "k", "kzz", { silent = true, desc = "move up" })
-keymap.set("n", "j", "jzz", { silent = true, desc = "move down" })
+-- keymap.set("n", "k", "kzz", { silent = true, desc = "move up" })
+-- keymap.set("n", "j", "jzz", { silent = true, desc = "move down" })
 --
 -- -- Always center the search element
 -- keymap.set("n", "n", "nzz", { silent = true, desc = "next search item" })
