@@ -11,6 +11,8 @@ export PATH=$PATH:/home/AANN/clones/nitch
 export PATH=$PATH:/home/AANN/go/bin
 export PATH=$PATH:/home/AANN/.cargo/bin
 
+alias getvid='yt-dlp --remote-components ejs:github -f "bv*+ba" '
+
 # other exports
 export EDITOR=nvim
 export HYPRSHOT_DIR='/home/AANN/Pics/SS/'
@@ -157,3 +159,4 @@ bindkey '^[[B' history-search-forward
 
 
 PS1=$'\n'"%1~ 󰅴  "
+. "/home/AANN/.deno/env"

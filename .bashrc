@@ -93,3 +93,4 @@ function y() {
 PS1='\n\W 󰅴 '
 # PS1='\u-\h \W\$ '
 # PS1='\u-\h \W\$ '
+. "/home/AANN/.deno/env"
