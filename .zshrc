@@ -65,6 +65,8 @@ alias cd='z'
 alias truec='cd ~/.config/ && ls'
 alias c='cd ~/dtfiles/ && ls'
 alias dies='poweroff'
+alias kan='sudo systemctl start kanata'
+alias kant='sudo pkill -9 kanata'
 
 # Enable zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

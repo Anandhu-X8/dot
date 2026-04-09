@@ -1,7 +1,7 @@
 
-spawn-at-startup "swww-daemon"
+spawn-at-startup "awww-daemon"
 spawn-sh-at-startup "wlsunset -l 10 -L 76"
-spawn-sh-at-startup "swww img ~/pics/Wall/retro.gif --transition-duration 1"
+spawn-sh-at-startup "awww img ~/pics/Wall/retro.gif --transition-duration 1"
 
 // This config is in the KDL format: https://kdl.dev
 // "/-" comments out the following node.
