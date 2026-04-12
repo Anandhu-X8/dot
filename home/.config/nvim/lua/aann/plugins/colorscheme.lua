@@ -42,7 +42,7 @@ return {
 		-- 👍 Add this block
 		on_highlights =
 			function(hl, colors)
-				hl.Comment = { fg = "#a9b1d6" } -- brighter comment color
+				hl.Comment = { fg = "#ffffff" } -- brighter comment color
 			end, vim.cmd("colorscheme tokyonight")
 	end,
 }
