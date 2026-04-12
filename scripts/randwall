@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Folder containing your images
+IMG_DIR="/home/AANN/Pics/Wall"
+
+# Pick a random image (works for files with spaces too)
+RANDOM_IMG=$(find "$IMG_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" \) | shuf -n 1)
+
+# Output the selected image path
+echo "$RANDOM_IMG"
