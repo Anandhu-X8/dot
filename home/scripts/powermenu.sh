@@ -20,8 +20,8 @@ no=' '
 
 # Rofi CMD
 rofi_cmd() {
-	rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 550px;}' \
-		-theme-str 'listview {columns: 2; lines: 2;}' \
+	rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 451px;}' \
+		-theme-str 'listview {columns: 1; lines: 4;}' \
     -dmenu \
 		-p "Uptime: $uptime" \
 		-mesg 'Time is of the Essence' #\

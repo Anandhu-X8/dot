@@ -96,7 +96,7 @@ input {
     }
 
     // Uncomment this to make the mouse warp to the center of newly focused windows.
-    // warp-mouse-to-focus
+     warp-mouse-to-focus
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
@@ -426,6 +426,7 @@ window-rule {
     match app-id=r#"^libre"#
     match title="Tor Browser"
     match app-id="spotify"
+    match app-id="gimp"
     opacity 1.0
 }
 
@@ -435,10 +436,15 @@ window-rule {
     match title="Volume Control"
     open-floating true
 }
-
+window-rule {
+    match title="Red Dead Redemption 2"
+    open-fullscreen true
+    opacity 1.0
+}
 window-rule {
     match app-id="vlc"
     open-fullscreen true
+      open-maximized true
     opacity 1.0
 }
 window-rule {
@@ -506,7 +512,7 @@ binds {
 	// MY OWN APP-LAUNCHERS
 	// my binds
 
-    Mod+Slash { spawn-sh "waypaper --random" ; }
+    Mod+Slash hotkey-overlay-title="random wallpaper" { spawn-sh "waypaper --random" ; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Alt+F4 allow-when-locked=true { spawn "brightnessctl" "set" "5%-"; }
@@ -523,9 +529,9 @@ binds {
 
     // shell scripts
     // toggle touchpad
-    Mod+N { spawn-sh "/home/AANN/scripts/disable-trackpad.sh " ; }
+    Mod+N hotkey-overlay-title="disable trackpad" { spawn-sh "/home/AANN/scripts/disable-trackpad.sh " ; }
     // toggle backlight 
-    Mod+Space { spawn-sh "/home/AANN/scripts/backlight-toggle.sh " ; }
+    Mod+Space hotkey-overlay-title="toggle backlight" { spawn-sh "/home/AANN/scripts/backlight-toggle.sh " ; }
     
     Print { 
         spawn "script" "--command" "XDG_CURRENT_DESKTOP=sway flameshot gui" "/dev/null";
@@ -534,15 +540,17 @@ binds {
     
     // screenshot tools
     Mod+F11 hotkey-overlay-title="flameshot" { spawn-sh "flameshot gui"; }
+    Mod+Z hotkey-overlay-title="flameshot" { spawn-sh "flameshot gui"; }
     // Mod+Y { spawn-sh 'grim -g "$(slurp)" - | swappy -f - ';}
     // hyprshot is a wrapper for the ugly command you see above,
     // grim takes ss, slurp helps select area, swappy(optional) enables markup
     Mod+F9 {spawn-sh "hyprshot -m region -o /home/AANN/pics/hyprshots" ;}
     Mod+F10 {spawn-sh "hyprshot -m region -o /home/AANN/pics/hyprshots --clipboard-only";}
-    Mod+X {spawn-sh "hyprshot -m region -o /home/AANN/pics/hyprshots --clipboard-only";}
+    Mod+X hotkey-overlay-title="hyprshot - clipboard-only" {spawn-sh "hyprshot -m region -o /home/AANN/pics/hyprshots --clipboard-only";}
     
     // screen lock tools
-    Mod+grave {spawn "hyprlock";}
+    // Mod+grave {spawn "hyprlock";}
+    Mod+grave {spawn-sh "/home/AANN/scripts/powermenu.sh";}
 
     // everyday tools
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
