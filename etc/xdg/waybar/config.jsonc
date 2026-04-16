@@ -12,7 +12,7 @@
         "memory",
        "niri/workspaces",
 //        "sway/mode",
-        "niri/scratchpad"
+//        "niri/scratchpad"
 //        "custom/waybar-media"
     ],
    "modules-center": [
@@ -28,7 +28,7 @@
 //        "sway/language",
         "battery",
         // "battery#bat2"
-       // "tray"
+        "tray",
 	
         "custom/power"
     ],
@@ -176,12 +176,14 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         //"format-wifi": "{essid} ({signalStrength}%) ",
+        "interval": 4,
         "format-wifi": "{essid} ({signalStrength}%)",
         // "format-wifi": "Ping! ({signalStrength}%)",
         "format-ethernet": "{ipaddr}/{cidr} ",
         //"tooltip-format": "{ifname} via {gwaddr} ",
         "tooltip-format": "{essid} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
+       // "on-click": "exec nm-applet",
         "format-disconnected": "Offline! ⚠"
         //"format-alt": "{ifname}: {ipaddr}/{cidr} ({signalStrength}%)"
         // "format-alt": "{essid}"

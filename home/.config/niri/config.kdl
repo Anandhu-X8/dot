@@ -401,7 +401,7 @@ window-rule {
 }
 //
 
-
+// mine
 // my windows
 // all windows
 
@@ -429,11 +429,30 @@ window-rule {
     match app-id="gimp"
     opacity 1.0
 }
+// trying wildcard
+window-rule {
+    match title=r#"^Rename"#
+    open-floating true
+}
+
+// niri/ rust regex does not support negation
+// all inkscape has same app-id but only true one ends with Inkscape
+
+window-rule {
+match app-id="org.inkscape.Inkscape"
+open-floating true
+}
+window-rule {
+match title=r#"Inkscape$"#
+open-floating false
+}
+
 
 // floating windows
 window-rule {
     match app-id="waypaper"
     match title="Volume Control"
+    match app-id="nm-connection-editor"
     open-floating true
 }
 window-rule {
@@ -441,12 +460,12 @@ window-rule {
     open-fullscreen true
     opacity 1.0
 }
+
 window-rule {
-    match app-id="vlc"
-    open-fullscreen true
-      open-maximized true
-    opacity 1.0
+    match app-id=r#"^vlc"# 
+    open-maximized true
 }
+
 window-rule {
     match app-id="zen"
 //    open-maximized-to-edges
