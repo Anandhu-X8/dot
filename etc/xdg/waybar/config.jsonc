@@ -10,7 +10,7 @@
         "temperature",
          "cpu",
         "memory",
-       "niri/workspaces",
+       "niri/workspaces"
 //        "sway/mode",
 //        "niri/scratchpad"
 //        "custom/waybar-media"
@@ -230,7 +230,7 @@
 //         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
 //     },
 //     "custom/power": {
-//         "format" : "⏻ ",
+//         "format" : "󱪉",
 // 		"tooltip": false,
 // 		"menu": "on-click",
 // 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
@@ -246,7 +246,7 @@
   "custom/power": {
     "tooltip": false,
     "on-click": "$HOME/scripts/powermenu.sh",
-    "format": "⏻"
+    "format": "󰤆"
 
   }
 }

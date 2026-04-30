@@ -1,6 +1,7 @@
 
 spawn-at-startup "awww-daemon"
 spawn-sh-at-startup "wlsunset -l 10 -L 76"
+spawn-at-startup "env XDG_CURRENT_DESKTOP=GNOME nm-applet --indicator"
 spawn-sh-at-startup "awww img ~/pics/Wall/retro.gif --transition-duration 1"
 
 // This config is in the KDL format: https://kdl.dev
@@ -19,6 +20,9 @@ layer-rule {
 layer-rule {
     match namespace="^rofi$"
     opacity 0.95
+    background-effect {
+        blur true
+    }
     shadow {
         on
     }
@@ -96,7 +100,7 @@ input {
     }
 
     // Uncomment this to make the mouse warp to the center of newly focused windows.
-     warp-mouse-to-focus
+     // warp-mouse-to-focus
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
@@ -415,7 +419,21 @@ window-rule {
 	match is-active=false
 	opacity 0.90
 }
+window-rule {
+    match app-id="thunar"
+    opacity 0.8
 
+    background-effect {
+        blur true
+    }
+}
+window-rule {
+    match app-id="^kitty$"
+
+    background-effect {
+        blur true
+    }
+}
 // fully opaque apps
 window-rule {
     match app-id="gwenview"
@@ -457,6 +475,7 @@ window-rule {
 }
 window-rule {
     match title="Red Dead Redemption 2"
+      match title=r#"^Minecraft"#
     open-fullscreen true
     opacity 1.0
 }
